@@ -5,3 +5,8 @@ pkg/*
 spec/debug.log
 Gemfile.lock
 
+# Ruby mine files
+.idea/
+
+# Database
+acts_as_commentable_with_threading.sqlite3.db

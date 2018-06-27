@@ -8,7 +8,7 @@ ActiveRecord::Base.logger = Logger.new(File.join(plugin_test_dir, 'debug.log'))
 
 ActiveRecord::Base.configurations =
   YAML.load_file(File.join(plugin_test_dir, 'db', 'database.yml'))
-ActiveRecord::Base.establish_connection((ENV['DB'] || 'sqlite3mem').to_sym)
+ActiveRecord::Base.establish_connection((ENV['DB'] || 'sqlite3').to_sym)
 ActiveRecord::Migration.verbose = false
 load(File.join(plugin_test_dir, 'db', 'schema.rb'))
 
