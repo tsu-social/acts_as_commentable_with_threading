@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = 'acts_as_commentable_with_threading'
-  s.version  = '2.1.2'
+  s.version  = '2.1.4'
   s.date     = '2018-08-28'
   s.summary  = 'Polymorphic comments Rails gem'
   s.email    = 'julien@yabo-concept.ch'

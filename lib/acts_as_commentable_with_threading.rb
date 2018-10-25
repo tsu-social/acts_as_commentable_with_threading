@@ -45,8 +45,12 @@ module Acts #:nodoc:
 
     module LocalInstanceMethods
       # Helper method to display only root threads, no children/replies
-      def root_comments
-        comment_threads.where(parent_id: nil)
+      def root_comments(locale_id=nil)
+        if locale_id.nil?
+          comment_threads.where(parent_id: nil)
+        else
+          comment_threads.where(parent_id: nil).where(osdb_language_id: locale_id)
+        end
       end
 
       # Helper method to sort comments by date
