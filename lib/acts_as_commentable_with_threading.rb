@@ -52,6 +52,14 @@ module Acts #:nodoc:
           comment_threads.where(parent_id: nil).where(osdb_language_id: locale_id)
         end
       end
+      
+      def get_comments_count(locale_id=nil)
+         if locale_id.nil?
+            comment_threads.count
+          else
+            comment_threads.where(osdb_language_id: locale_id).count
+          end
+      end
 
       # Helper method to sort comments by date
       def comments_ordered_by_submitted
